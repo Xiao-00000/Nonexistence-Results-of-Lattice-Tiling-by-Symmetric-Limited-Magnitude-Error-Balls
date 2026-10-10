@@ -2,8 +2,7 @@
 
 This repository contains the code and output in Appendix B of
 
-> Ang Xiao, *On Lattice Tilings by Symmetric Limited Magnitude Error Balls:
-> Q-Polynomials and Ideal Characterization*.
+> *On Lattice Tilings by Symmetric Limited Magnitude Error Balls: Q-Polynomials and Ideal Characterization*.
 
 The code is runnable in Maple.
 
