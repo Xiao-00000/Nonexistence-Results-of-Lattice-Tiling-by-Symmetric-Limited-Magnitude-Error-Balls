@@ -24,11 +24,7 @@ The three numbers in parentheses are:
 The fourth entry is the congruence condition on the dimension $n$: the
 listed residue classes of $n$ modulo $p^{2+\lfloor\log_p t\rfloor}$ are
 excluded by Theorem 1.2, i.e. for such $n$ no lattice tiling of
-$\mathbb{Z}^n$ by $B(n,t,k,k)$ exists. Each listed class $n$ satisfies
-$p \mid |B(n,t,k,k)|$, $p^2 \nmid |B(n,t,k,k)|$, and passes the
-ideal-membership test of Theorem 1.2. The entry
-$n = p^{2+\lfloor\log_p t\rfloor}$ represents the residue class
-$0 \pmod{p^{2+\lfloor\log_p t\rfloor}}$. `N/A` means that no residue
+$\mathbb{Z}^n$ by $B(n,t,k,k)$ exists. `N/A` means that no residue
 class was excluded for that triple $(t,k,p)$.
 
 The percentage in Table 1 of the paper for a pair $(t,k)$ is
