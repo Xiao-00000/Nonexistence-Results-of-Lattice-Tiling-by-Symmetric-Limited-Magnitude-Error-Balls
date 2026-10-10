@@ -1,0 +1,52 @@
+# ========================================================================
+# Maple loop over all 2 <= t <= 10, 1 <= k <= 10, and all primes 3 <= p <= 29,
+# implementing Theorem 1.2 of
+# "On Lattice Tilings by Symmetric Limited Magnitude Error Balls:
+#  Q-Polynomials and Ideal Characterization".
+# Output: print(t, k, p, per, N2), where per = p^(2 + floor(log[p](t))) and
+# N2 is the set of residue classes n (1 <= n <= per; n = per represents the
+# residue class 0 mod per) for which no lattice tiling of Z^n by B(n,t,k,k)
+# exists. This produces the raw data of Appendix B.
+# ========================================================================
+
+restart;
+with(PolynomialIdeals):
+
+B := (n, t, k) -> add((2*k)^i * binomial(n, i), i = 0..t);
+
+for t from 2 to 10 do
+  for k from 1 to 10 do
+    mul1 := 1;
+    for i from 2 to 10 do
+      p := ithprime(i);
+      per := p^(2 + floor(log[p](t)));
+      N := {};
+      for n from 1 to per do
+        if B(n, t, k) mod p = 0 and B(n, t, k) mod p^2 <> 0 then
+          N := N union {n};
+        end if;
+      end do:
+      unassign('n');
+      A := series(ln(1 + 2*q*add(cosh(b*x), b = 1..k)), x, p):
+      for ii from 1 to p-1 do
+        a[ii] := simplify(ii! * coeff(A, x, ii) * Y[ii/2]);
+      end do:
+      for j from 1 to (p-1)/2 do
+        F[j](q) := (1 + 2*q*k)^n / (1-q)
+                   * CompleteBellB(2*j, seq(a[ii], ii = 1..2*j)):
+        Q[j] := expand(coeff(series(F[j](q), q, t+2), q, t)):
+      end do:
+      N2 := {};
+      for n in N do
+        J := PolynomialIdeal(seq(Q[i], i = 1..(p-1)/2 - 1),
+                             characteristic = p);
+        if Q[(p-1)/2] in J then
+          N2 := N2 union {n};
+        end if;
+      end do:
+      print(t, k, p, per, N2);
+      mul1 := mul1 * (1 - numelems(N2)/(per*1.0));
+    end do;
+    # print("@", t, k, 1 - mul1);   # excluded fraction for Table 1
+  end do;
+end do:
