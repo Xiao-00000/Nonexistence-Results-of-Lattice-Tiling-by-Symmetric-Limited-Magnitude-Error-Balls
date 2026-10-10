@@ -1,6 +1,6 @@
 # Nonexistence Results of Lattice Tiling by Symmetric Limited Magnitude Error Balls
 
-This repository contains the code and output in Appendix B of
+This repository contains the code and output in Appendices of
 
 > *On Lattice Tilings by Symmetric Limited Magnitude Error Balls:
 > Q-Polynomials and Ideal Characterization*.
