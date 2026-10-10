@@ -2,17 +2,17 @@
 
 This repository contains the code and output in Appendix B of
 
-> Ang Xiao, *On Lattice Tilings by Symmetric Limited Magnitude Error Balls:
+> *On Lattice Tilings by Symmetric Limited Magnitude Error Balls:
 > Q-Polynomials and Ideal Characterization*.
 
 The code is runnable in Maple.
 
 ## Files
 
-- `Codes/IdealMethodCode.txt` and `Codes/IdealMethodCode.mpl` — Maple
+- `Codes/IdealMethodCode.mpl` — Maple
   implementation of Theorems 1.1 and 1.2 for arbitrary `t`, `k` and an odd
   prime `p` (Appendix A, Listing 1 of the paper).
-- `Codes/ComputeAllResults.txt` and `Codes/ComputeAllResults.mpl` — the loop
+- `Codes/ComputeAllResults.mpl` — the loop
   over `2 <= t <= 10`, `1 <= k <= 10` and all primes `3 <= p <= 29` that
   produced the raw data of Appendix B.
 - `Nonexistence Results of Lattice Tiling by Symmetric Limited Magnitude Error Balls.md`
@@ -23,8 +23,6 @@ The code is runnable in Maple.
 
 The `.mpl` files can be run directly in Maple (e.g. `read "IdealMethodCode.mpl";`
 in a Maple session, or `maple -q IdealMethodCode.mpl` from the command line);
-the `.txt` files contain identical code and are provided for convenient
-viewing on GitHub.
 
 ## How to read the data
 
