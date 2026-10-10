@@ -11,12 +11,12 @@ t := 4: k := 3: p := 11: # set t, k, p as needed
 period := p^(2 + floor(log[p](t))); # period of |B(n,t,k,k)| mod p^2
 
 # |B(n,t,k,k)| = sum_{i=0..t} (2k)^i * binomial(n,i)
-ballSize := nn -> add((2*k)^i * binomial(nn, i), i = 0..t);
+ballSize := (nn, t, k) -> add((2*k)^i * binomial(nn, i), i = 0..t);
 
 # Step 1: candidates n with p | |B| and p^2 !| |B| (hypothesis of Theorem 1.2)
 candidates := {}:
 for nn from 1 to period do
-  if ballSize(nn) mod p = 0 and ballSize(nn) mod p^2 <> 0 then
+  if ballSize(nn, t, k) mod p = 0 and ballSize(nn, t, k) mod p^2 <> 0 then
     candidates := candidates union {nn};
   end if;
 end do:

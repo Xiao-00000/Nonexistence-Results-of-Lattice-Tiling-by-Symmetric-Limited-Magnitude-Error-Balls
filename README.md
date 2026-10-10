@@ -8,15 +8,22 @@ The code is runnable in Maple.
 
 ## Files
 
-- `Codes/IdealMethodCode.txt` — Maple implementation of Theorems 1.1 and 1.2
-  for arbitrary `t`, `k` and an odd prime `p` (Appendix A, Listing 1 of the paper).
-- `Codes/ComputeAllResults.txt` — the loop over `2 <= t <= 10`, `1 <= k <= 10`
-  and all primes `3 <= p <= 29` that produced the raw data of Appendix B.
+- `Codes/IdealMethodCode.txt` and `Codes/IdealMethodCode.mpl` — Maple
+  implementation of Theorems 1.1 and 1.2 for arbitrary `t`, `k` and an odd
+  prime `p` (Appendix A, Listing 1 of the paper).
+- `Codes/ComputeAllResults.txt` and `Codes/ComputeAllResults.mpl` — the loop
+  over `2 <= t <= 10`, `1 <= k <= 10` and all primes `3 <= p <= 29` that
+  produced the raw data of Appendix B.
 - `Nonexistence Results of Lattice Tiling by Symmetric Limited Magnitude Error Balls.md`
   — the full raw output: for each triple `(t, k, p)` the residue classes `n`
   modulo `p^(2 + floor(log_p t))` excluded by Theorem 1.2. `N/A` means that no
   residue class was excluded for that triple.
 - `results.csv` — the same data in machine-readable form.
+
+The `.mpl` files can be run directly in Maple (e.g. `read "IdealMethodCode.mpl";`
+in a Maple session, or `maple -q IdealMethodCode.mpl` from the command line);
+the `.txt` files contain identical code and are provided for convenient
+viewing on GitHub.
 
 ## How to read the data
 
