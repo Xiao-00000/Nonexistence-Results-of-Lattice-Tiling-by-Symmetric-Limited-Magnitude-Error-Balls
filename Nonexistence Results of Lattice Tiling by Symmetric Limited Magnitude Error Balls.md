@@ -6,7 +6,7 @@ This markdown document presents the computational results of Appendix B of the p
 
 **Notation.** For integers $n \ge t \ge 1$ and $k \ge 1$, let
 
-$$B(n,t,k,k) = \{a=(a_1,\dots,a_n)\in\mathbb{Z}^n : a_i\in[-k,k],\ \mathrm{wt}(a)\le t\}$$
+$$B(n,t,k,k) = \\{a=(a_1,\dots,a_n)\in\mathbb{Z}^n : a_i\in[-k,k],\ \mathrm{wt}(a)\le t\\}$$
 
 denote the symmetric limited magnitude error ball in $\mathbb{Z}^n$.
 
