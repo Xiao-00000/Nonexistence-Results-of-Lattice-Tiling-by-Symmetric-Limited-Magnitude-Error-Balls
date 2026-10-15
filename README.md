@@ -1,9 +1,10 @@
 # Nonexistence Results of Lattice Tiling by Symmetric Limited Magnitude Error Balls
 
-This repository contains the code and output in Appendices of
+Companion repository for the paper
 
-> *On Lattice Tilings by Symmetric Limited Magnitude Error Balls:
-> Q-Polynomials and Ideal Characterization*.
+> **Ang Xiao**, *On Lattice Tilings by Symmetric Limited Magnitude Error Balls: Q-Polynomials and Ideal Characterization*.
+
+It collects the code and computational data of the paper together with a Lean 4 formalization of its results.
 
 The code is runnable in Maple.
 
@@ -36,3 +37,18 @@ represents the residue class `0` modulo that period.
 The percentage in Table 1 of the paper for a pair `(t, k)` is
 `1 - prod_p (1 - |N2(p)| / p^(2 + floor(log_p t)))` over the nine primes
 `3 <= p <= 29`, where `N2(p)` is the excluded set printed for `(t, k, p)`.
+
+## Lean 4 formalization
+
+All statements proved in the paper, except those that rest on the Maple computations, are
+formalized and machine-checked in the proof assistant **Lean 4** with the library **Mathlib**.
+The formalization contains no `sorry` and uses only the standard axioms of Lean; it was produced
+with the help of the AI system **Aristotle** by Harmonic.
+
+- Directory: [`lean4/`](lean4/)
+- Overview and the file ↔ paper correspondence: [`lean4/README_lean4.md`](lean4/README_lean4.md)
+- To build:
+
+  ```bash
+  cd lean4
+  lake build
