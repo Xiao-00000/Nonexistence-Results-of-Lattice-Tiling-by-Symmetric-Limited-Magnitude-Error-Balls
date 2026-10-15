@@ -47,8 +47,3 @@ with the help of the AI system **Aristotle** by Harmonic.
 
 - Directory: [`lean4/`](lean4/)
 - Overview and the file ↔ paper correspondence: [`lean4/README_lean4.md`](lean4/README_lean4.md)
-- To build:
-
-  ```bash
-  cd lean4
-  lake build
