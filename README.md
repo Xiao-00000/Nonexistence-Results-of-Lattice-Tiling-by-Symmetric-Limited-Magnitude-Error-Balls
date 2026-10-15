@@ -1,4 +1,4 @@
-# Nonexistence Results of Lattice Tiling by Symmetric Limited Magnitude Error Balls
+# On Lattice Tilings by Symmetric Limited Magnitude Error Balls
 
 Companion repository for the paper
 
